@@ -43,12 +43,14 @@ const quotes = [
   },
 ];
 
-
 /***
  * `getRandomQuote` function
 ***/
-
-
+function getRandomQuote () {
+const randomNumber = Math.round(Math.random() * 4);
+return randomNumber
+}
+console.log(getRandomQuote());
 
 /***
  * `printQuote` function
