@@ -48,7 +48,7 @@ const quotes = [
 ***/
 function getRandomQuote () {
 const randomNumber = Math.round(Math.random() * 4);
-return randomNumber
+return quotes[randomNumber];
 }
 console.log(getRandomQuote());
 
