@@ -50,11 +50,21 @@ function getRandomQuote () {
 const randomNumber = Math.round(Math.random() * 4);
 return quotes[randomNumber];
 }
-console.log(getRandomQuote());
 
 /***
  * `printQuote` function
 ***/
+function printQuote() {
+const randomQuote = 0;
+const HTML = '<p class="quote">quotes.quote</p> <p class="source">quotes.source';
+if (condition) {
+  
+}
+if (condition) {
+  
+}
+
+}
 
 
 
