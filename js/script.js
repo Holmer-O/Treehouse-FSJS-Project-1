@@ -2,6 +2,7 @@
 Treehouse FSJS Techdegree:
 project 1 - A Random Quote Generator
 ******************************************/
+//Just to let you know regarding grades, I am going for a 'Meets Expectations' but I included some, but not all, of the extras anyway.
 
 /*** 
  * This is the `quotes` array containing a variety of property names and values in each object.
@@ -41,17 +42,18 @@ const quotes = [
 
 /***
  * The `getRandomQuote` function first takes a random number in the range 0 to less than 1, multiplies it by 4 which is the index of the final quote,
- * rounds the number it to nearest int and stores it in a variable. It then uses that number as an index to return a random quote from the quotes array.
+ * rounds the number to nearest int and stores it in a variable. It then uses that int as an index by which to return a random object from the quotes array.
 ***/
 function getRandomQuote () {
 const randomNumber = Math.round(Math.random() * 4);
 return quotes[randomNumber];
 }
 
+
 /***
- * The `printQuote` function stores a random quote by calling the getRandomQuote function. It goes on to create an HTML string which always contains
- * the quote itself and source. And if the random quote object alsdo contains citation, year or tags, those are added to the HTML string as well.
- * The finalised string is then output to the selected 'quote-box' HTML element.  
+ * The `printQuote` function first stores a random quote by calling the `getRandomQuote` function. It goes on to store an HTML string which always contains
+ * the quote itself and source. And if the random quote object also contains citation, year or tags, those are added to the HTML string as well.
+ * The finalised string is then output to the selected 'quote-box' HTML element. 
 ***/
 function printQuote() {
 const randomQuote = getRandomQuote();
