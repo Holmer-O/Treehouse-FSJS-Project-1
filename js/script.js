@@ -2,7 +2,6 @@
 Treehouse FSJS Techdegree:
 project 1 - A Random Quote Generator
 ******************************************/
-//Just to let you know regarding grades, I am going for a 'Meets Expectations' but I included some, but not all, of the extras anyway.
 
 /*** 
  * This is the `quotes` array containing a variety of property names and values in each object.
