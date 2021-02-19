@@ -1,11 +1,11 @@
-/******************************************
-Treehouse FSJS Techdegree:
-project 1 - A Random Quote Generator
-******************************************/
+/**
+ * Treehouse Techdegree:
+ * FSJS Project 1 - A Random Quote Generator
+ */
 
-/*** 
- * This is the `quotes` array containing a variety of property names and values in each object.
-***/
+/**
+ * The quotes array contains a variety of property keys and values in each quote object.
+ */
 const quotes = [
   {
     quote: 'It is not death that a man should fear, but he should fear never beginning to live.',
@@ -39,23 +39,17 @@ const quotes = [
   }
 ];
 
-/***
- * The `getRandomQuote` function first takes a random number in the range 0 to less than 1, multiplies it by 4 which is the index of the final quote,
- * rounds the number to nearest int and stores it in a variable. It then uses that int as an index by which to return a random object from the quotes array.
- * Fixed. Now using quotes.length instead of a hard-coded value. And math.floor to make chanches equal, rather than math.round.
-***/
+/**
+ * Get random quote function - returns a random quote from the quotes array.
+ */
 function getRandomQuote () {
 const randomNumber = Math.floor(Math.random() * quotes.length);
 return quotes[randomNumber];
 }
 
-
-/***
- * The `printQuote` function first stores a random quote by calling the `getRandomQuote` function. It goes on to store an HTML string which always contains
- * the quote itself and source. And if the random quote object also contains citation, year or tags, those are added to the HTML string as well.
- * The finalised string is then output to the selected 'quote-box' HTML element.
- * Fixed. Now changed the var name html to lower case.
-***/
+/**
+ * Print quote function - prints a random quote and its source. If available, also citation, year and tags.
+ */
 function printQuote() {
 const randomQuote = getRandomQuote();
 let html = `<p class="quote">${randomQuote.quote}</p> <p class="source">${randomQuote.source}`;
@@ -72,9 +66,7 @@ html+='</p>';
 document.getElementById('quote-box').innerHTML = html;
 }
 
-/***
- * click event listener for the print quote button
- * DO NOT CHANGE THE CODE BELOW!!
-***/
-
+/**
+ * Click event listener for the print quote button.
+ */
 document.getElementById('load-quote').addEventListener("click", printQuote, false);
